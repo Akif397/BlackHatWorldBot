@@ -1,11 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.linereflection.core;
 
-import com.linereflection.model.Post;
+import com.lineReflection.db.DBModel.PostDetails;
 import java.util.LinkedList;
 import java.util.List;
 import org.openqa.selenium.WebDriver;
@@ -17,12 +12,12 @@ import org.openqa.selenium.WebElement;
  */
 public class ProcessEngine {
     
-    public List<Post> getAllPost(WebDriver driver){
-        List<Post> postList = new LinkedList<Post>();
+    public List<PostDetails> getAllPost(WebDriver driver){
+        List<PostDetails> postList = new LinkedList<PostDetails>();
         
         List<WebElement> postWebElements = getViewPagedPostList(driver);
         for(WebElement element : postWebElements){
-            Post post =  getPost(element, driver);
+            PostDetails post =  getPost(element, driver);
             postList.add(post);
         }
         
@@ -37,8 +32,8 @@ public class ProcessEngine {
         
     }
 
-    private Post getPost(WebElement element, WebDriver driver) {
-        Post  post = new Post();
+    private PostDetails getPost(WebElement element, WebDriver driver) {
+        PostDetails  post = new PostDetails();
         
         return post;
     }

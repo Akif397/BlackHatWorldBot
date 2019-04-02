@@ -5,8 +5,11 @@
  */
 package com.linereflection.core;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,12 +20,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class Applauncher {
 
+    private static final Log LOGGER = LogFactory.getLog(Applauncher.class);
     public static String BLACK_HAT_WORLD_USER_ID = "akifmuhtasim397@gmail.com";
     public static String BLACK_HAT_WORLD_PASSWORD = "A1234321";
     public static String CHROME_DRIVER_LOCATION = "lib\\chromedriver.exe";
     public static String URL = "https://www.blackhatworld.com/";
-
-    public int totalClicked = 0;
 
     private BHWBotHandler bhwBotHandler = null;
 
@@ -76,9 +78,16 @@ public class Applauncher {
         driver = null;
     }
     
+    public void cleanChromeDriver(){
+        try {
+            Runtime.getRuntime().exec("taskkill /F /IM chromedriver* /T");
+        } catch (IOException ex) {
+            LOGGER.fatal(ex.getMessage());
+        }
+    }
     public void postProcess(){
         bhwBotHandler = new BHWBotHandler();
-        bhwBotHandler.postDetailsInHomePage(driver, tempdriver);
+        bhwBotHandler.postDetailsInHomePage(driver);
     }
 
 }
