@@ -3,8 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Akif/Documents/NetBeansProjects/BHWBot/src/com/linereflection/model/Post.java</file>
-            <file>file:/C:/Users/Akif/Documents/NetBeansProjects/BHWBot/Test/tester.java</file>
+            <file>file:/C:/Users/Akif/Documents/NetBeansProjects/BlackHatWorld/BHWBot/BlackHatWorldBot/BHWBot/src/com/linereflection/core/Applauncher.java</file>
+            <file>file:/C:/Users/Akif/Documents/NetBeansProjects/BlackHatWorld/BHWBot/BlackHatWorldBot/BHWBot/src/com/linereflection/core/BHWBotHandler.java</file>
+            <file>file:/C:/Users/Akif/Documents/NetBeansProjects/BlackHatWorld/BHWBot/BlackHatWorldBot/BHWBot/src/com/linereflection/core/ProcessEngine.java</file>
         </group>
     </open-files>
 </project-private>
