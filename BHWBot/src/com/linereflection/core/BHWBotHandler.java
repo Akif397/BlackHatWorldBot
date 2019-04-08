@@ -183,8 +183,10 @@ public class BHWBotHandler {
                 String[] discussionAndTimeString = pageDiscusion.split(",");
                 String discussion = discussionAndTimeString[0].trim();
                 String time = discussionAndTimeString[1].trim();
-                postDetails.setDiscussion(discussion);
-                System.out.println(discussion);
+                String[] onlyDiscussion = discussion.split("'");
+                System.out.println(onlyDiscussion[1]);
+                postDetails.setDiscussion(onlyDiscussion[1]);
+                System.out.println(onlyDiscussion[1]);
             } catch (Exception e) {
                 System.out.println("No discussion available.");
             }
