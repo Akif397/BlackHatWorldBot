@@ -5,8 +5,11 @@
  */
 package com.linereflection.core;
 
+import com.lineReflection.db.DBManager.DBManager;
+import com.lineReflection.db.DBModel.PostDetails;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -88,6 +91,7 @@ public class Applauncher {
     public void postProcess(){
         bhwBotHandler = new BHWBotHandler();
         bhwBotHandler.postDetailsInHomePage(driver);
+//        DBManager.getDBManager().insertPostDetailsToDatabase(postDetailsList);
     }
 
 }
