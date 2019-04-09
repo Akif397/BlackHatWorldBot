@@ -5,8 +5,8 @@
  */
 package com.linereflection.core;
 
-import com.lineReflection.db.DBManager.DBManager;
-import com.lineReflection.db.DBModel.PostDetails;
+import com.linereflection.db.DBManager.DBManager;
+import com.linereflection.db.DBModel.PostDetails;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -155,13 +155,11 @@ public class BHWBotHandler {
             postDetails.setUserEmail(DBManager.getDBManager().getLoggedInUser().getEmail());
             count++;
             DBManager.getDBManager().insertPostDetailsToDatabase(postDetails);
-            DBManager.getDBManager().populatePostAuthorTable(postDetails);
-            DBManager.getDBManager().populatePostDateTable(postDetails);
-            try {
-                DBManager.getDBManager().closeConnection();
-            } catch (SQLException ex) {
-                Logger.getLogger(BHWBotHandler.class.getName()).log(Level.SEVERE, null, ex);
-            }
+//            try {
+//                DBManager.getDBManager().closeConnection();
+//            } catch (SQLException ex) {
+//                Logger.getLogger(BHWBotHandler.class.getName()).log(Level.SEVERE, null, ex);
+//            }
             System.out.println("postDetailsLists size : " + postDetailsLists.size());
         }
         return postDetails;
@@ -184,7 +182,6 @@ public class BHWBotHandler {
                 String discussion = discussionAndTimeString[0].trim();
                 String time = discussionAndTimeString[1].trim();
                 String[] onlyDiscussion = discussion.split("'");
-                System.out.println(onlyDiscussion[1]);
                 postDetails.setDiscussion(onlyDiscussion[1]);
                 System.out.println(onlyDiscussion[1]);
             } catch (Exception e) {

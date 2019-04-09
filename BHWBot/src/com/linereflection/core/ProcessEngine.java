@@ -1,6 +1,6 @@
 package com.linereflection.core;
 
-import com.lineReflection.db.DBModel.PostDetails;
+import com.linereflection.db.DBModel.PostDetails;
 import java.util.LinkedList;
 import java.util.List;
 import org.openqa.selenium.WebDriver;

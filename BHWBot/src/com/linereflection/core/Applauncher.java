@@ -5,8 +5,8 @@
  */
 package com.linereflection.core;
 
-import com.lineReflection.db.DBManager.DBManager;
-import com.lineReflection.db.DBModel.PostDetails;
+import com.linereflection.db.DBManager.DBManager;
+import com.linereflection.db.DBModel.PostDetails;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
