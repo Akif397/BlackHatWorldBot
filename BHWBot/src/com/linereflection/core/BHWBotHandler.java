@@ -209,8 +209,8 @@ public class BHWBotHandler {
             try {
                 //for tag
                 WebElement postTag = postDetailsInAnotherWindowElement.findElement(By.className("tagBlock"));
-                String tag = postTag.getText().replaceAll("\n", ", ").trim();
-                String tagOk = tag.replace("Tags:, ", "");
+                String tag = postTag.getText().replaceAll("\n", ",").trim();
+                String tagOk = tag.replace("Tags:, ","");
                 postDetails.setTags(tagOk);
                 System.out.println(tagOk);
             } catch (Exception e) {
